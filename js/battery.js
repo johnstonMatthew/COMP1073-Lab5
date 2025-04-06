@@ -6,7 +6,11 @@ const chargeStatus = document.querySelector('#battery dd:nth-of-type(1)');
 const chargeLevel = document.querySelector('#battery dd:nth-of-type(2) output');
 // STEP 1c: Grab the <progress> element inside the second <dd> element for a more graphical representation of the battery's state of charge (SOC)
 const chargeMeter = document.querySelector('#battery dd:nth-of-type(2) progress');
-const apiImage = document.querySelector('#robotImg');
+const body = document.querySelector('body');
+
+const apiImage = document.createElement('img');
+body.appendChild(apiImage);
+apiImage.setAttribute("alt", "Robot Image");
 
 /* Functions
 -------------------------------------------------- */
